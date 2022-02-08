@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12.22.10
 
 # instalar python
 RUN apt-get update && apt-get install -y python python3-pip python-dev 
@@ -11,5 +11,4 @@ RUN ./aws/install && aws --version
 
 # instalar angular 9
 ENV ANGULAR_CLI_VERSION=9.1.15
-RUN npm install -g \
-	@angular/cli@${ANGULAR_CLI_VERSION}
+RUN npm install -g @angular/cli@${ANGULAR_CLI_VERSION}
